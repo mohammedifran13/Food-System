@@ -43,7 +43,6 @@
         <section class="home-kitchen">
             <h2>Home Kitchen </h2>
             <div class="food-grid" id="foodGrid">
-                <!-- Food items will be populated by JavaScript -->
             </div>
         </section>
 
@@ -52,22 +51,30 @@
             <div class="carousel">
                 <button class="carousel-btn prev">◀</button>
                 <div class="carousel-items" id="carouselItems">
-                    <!-- Popular items will be populated by JavaScript -->
+                    
                 </div>
                 <button class="carousel-btn next">▶</button>
             </div>
             <button class="request-dish-btn">Request a Dish</button>
         </section>
 
-        <section class="about-service">
-            <h2>We are providing best<br>home cooked food delivery service.</h2>
-            <p>Away from home and craving the tasty homemade recipes?<br>Choose from a selection of our delicious home cooked dishes</p>
+        <section class="video-section">
+            <h2>We are providing best</h2>
+            <h2> home cooked food delivery service.</h2>
+            <p>Away from home and craving the tasty homemade recipes?</p>
+            <p>Choose from a selection of our delicious home cooked dishes</p>
             <div class="video-container">
-                <img src="image/row.png" alt="Food preparation">
-                <button class="play-btn">▶</button>
+                
+                <video id="promoVideo" class="video" width="100%" height="auto" poster="image/row.png">
+                    <source src="image/food/pizza video.mp4" type="video/mp4">
+                </video>
+        
+                
+                <button id="playPauseBtn" class="play-btn">▶</button>
             </div>
         </section>
-
+        
+        
         <section class="contact-form">
             <div class="form-content">
                 <h3>Do you have a question<br>or want to become a seller?</h3>
@@ -80,7 +87,7 @@
                 </form>
             </div>
             <div class="form-image">
-                <img src="/image/Food_delivery_cute_man_riding_motorcycles_cartoon_art_illustration 2.svg"alt="Delivery person">
+                <img src="./image/Food_delivery_cute_man_riding_motorcycles_cartoon_art_illustration 2.svg"alt="Delivery person">
             </div>
         </section>
     </main>
@@ -96,19 +103,24 @@
                 <a href="#">Contact</a>
             </div>
             <div class="social-links">
-                <a href="#" class="facebook">f</a>
-                <a href="#" class="instagram">ig</a>
-            </div>
+                <a href="#">
+                    <img src="image/Card.png" alt="Facebook" width="30" height="30">
+                </a> 
+                <a href="#">
+                    <img src="image/iconoir_add-to-cart.svg" alt="Instagram" width="30" height="30">
+                </a>
+                 </div>
         </div>
+        <hr style="margin: 1rem 0; border: 0; border-top: 1px solid #ccc;">
     </footer>
 
 
-    <!-- Cart Modal -->
+    
     <div class="cart-modal" id="cartModal">
         <div class="cart-content">
             <h2>Cart</h2>
             <div class="cart-items">
-                <!-- Cart items will be populated by JavaScript -->
+                
             </div>
             <div class="cart-empty">
                 <img src="https://raw.githubusercontent.com/stackblitz/stackblitz-images/main/empty-cart.png" alt="Empty cart">
@@ -119,7 +131,7 @@
         </div>
     </div>
 
-    <!-- Request Dish Modal -->
+    
     <div class="request-dish-modal" id="requestDishModal">
         <div class="modal-content">
             <h2>Request a Dish</h2>

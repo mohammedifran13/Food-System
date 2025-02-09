@@ -1,4 +1,3 @@
-// Food items data
 const foodItems = [
   {
       id: 1,
@@ -6,7 +5,7 @@ const foodItems = [
       price: 190,
       rating: 4.7,
       time: '50-79 min',
-      image: '/image/food/h1-1.png'
+      image: './image/food/h1-1.png'
   },
   {
       id: 2,
@@ -14,7 +13,7 @@ const foodItems = [
       price: 180,
       rating: 4.8,
       time: '45-60 min',
-      image: '/image/food/h3-2.png'
+      image: './image/food/h3-2.png'
   },
   {
     id: 3,
@@ -22,7 +21,7 @@ const foodItems = [
     price: 220,
     rating: 4.6,
     time: '40-55 min',
-    image: '/image/food/h1-3.png'
+    image: './image/food/h1-3.png'
 },
 {
   id: 4,
@@ -30,7 +29,7 @@ const foodItems = [
   price: 220,
   rating: 4.6,
   time: '40-55 min',
-  image: '/image/food/h1-4.png'
+  image: './image/food/h1-4.png'
 },
 {
   id: 5,
@@ -38,7 +37,7 @@ const foodItems = [
   price: 220,
   rating: 4.6,
   time: '40-55 min',
-  image: '/image/food/h2-1.png'
+  image: './image/food/h2-1.png'
 },
 {
   id: 6,
@@ -46,7 +45,7 @@ const foodItems = [
   price: 220,
   rating: 4.6,
   time: '40-55 min',
-  image: '/image/food/h2-2.png'
+  image: './image/food/h2-2.png'
 },
 {
   id: 7,
@@ -54,7 +53,7 @@ const foodItems = [
   price: 220,
   rating: 4.6,
   time: '40-55 min',
-  image: '/image/food/h2-3.png'
+  image: './image/food/h2-3.png'
 },
 {
   id: 8,
@@ -62,7 +61,7 @@ const foodItems = [
   price: 220,
   rating: 4.6,
   time: '40-55 min',
-  image: '/image/food/h2-4.png'
+  image: './image/food/h2-4.png'
 },
 {
   id: 9,
@@ -70,7 +69,7 @@ const foodItems = [
   price: 220,
   rating: 4.6,
   time: '40-55 min',
-  image: '/image/food/h1-1.png'
+  image: './image/food/h1-1.png'
 },
 {
   id: 10,
@@ -78,7 +77,7 @@ const foodItems = [
   price: 220,
   rating: 4.6,
   time: '40-55 min',
-  image: '/image/food/h3-2.png'
+  image: './image/food/h3-2.png'
 },
 {
   id: 11,
@@ -86,7 +85,7 @@ const foodItems = [
   price: 220,
   rating: 4.6,
   time: '40-55 min',
-  image: '/image/food/h1-3.png'
+  image: './image/food/h1-3.png'
 },
 {
   id: 12,
@@ -94,11 +93,11 @@ const foodItems = [
   price: 220,
   rating: 4.6,
   time: '40-55 min',
-  image: '/image/food/h1-4.png'
+  image: './image/food/h1-4.png'
 },
 ];
 
-// Popular items data
+
 const popularItems = [
 {
     id: 1,
@@ -106,7 +105,7 @@ const popularItems = [
     price: 164,
     rating: 4.3,
     time: '50-79 min',
-    image: '/image/food/h1-1.png'
+    image: './image/food/h1-1.png'
 },
 {
     id: 2,
@@ -114,7 +113,7 @@ const popularItems = [
     price: 210,
     rating: 4.5,
     time: '55-70 min',
-    image: '/image/food/p2.png'
+    image: './image/food/p2.png'
 },
 {
     id: 3,
@@ -122,21 +121,21 @@ const popularItems = [
     price: 180,
     rating: 4.4,
     time: '45-60 min',
-    image: '/image/food/p3.png'
+    image: './image/food/p3.png'
 }
 ];
 
-// Cart state
+
 let cart = [];
 
-// DOM Elements
+
 const foodGrid = document.getElementById('foodGrid');
 const carouselItems = document.getElementById('carouselItems');
 const cartModal = document.getElementById('cartModal');
 const cartBtn = document.querySelector('.cart-btn');
 const backToMenuBtn = document.querySelector('.back-to-menu');
 
-// Render food items
+
 function renderFoodItems() {
     foodGrid.innerHTML = foodItems.map(item => `
         <div class="food-item">
@@ -146,14 +145,14 @@ function renderFoodItems() {
                 <div class="food-item-footer">
                     <div class="rating">⭐ ${item.rating} (${item.time})</div>
                      <div class="price">₹${item.price}</div>
-                    <button onclick="addToCart(${item.id})" class="add-to-cart">+</button>
+                    <button onclick="addToCart(${item.id})" style="background-color:orange;color : white;  border: none; padding: 5px 5px; font-size: 16px; cursor: pointer; border-radius: 5px;">+</button>
                 </div>
             </div>
         </div>
     `).join('');
 }
 
-// Render popular items
+
 function renderPopularItems() {
     carouselItems.innerHTML = popularItems.map(item => `
         <div class="food-item">
@@ -163,14 +162,14 @@ function renderPopularItems() {
                 <div class="food-item-footer">
                     <div class="rating">⭐ ${item.rating} (${item.time})</div>
                     <div class="price">₹${item.price}</div>
-                    <button onclick="addToCart(${item.id})" class="add-to-cart">+</button>
-                </div>
+                    <button onclick="addToCart(${item.id})" style="background-color:orange; color: white; border: none; padding: 5px 10px; font-size: 16px; cursor: pointer; border-radius: 5px;">+</button>
+ </div>
                    </div>
         </div>
     `).join('');
 }
 
-// Cart functions
+
 function addToCart(itemId) {
     const item = [...foodItems, ...popularItems].find(item => item.id === itemId);
     if (item) {
@@ -207,7 +206,7 @@ function removeFromCart(itemId) {
   updateCart();
 }
 
-// Modal functions
+
 function openRequestDishModal() {
   const modal = document.getElementById('requestDishModal');
   modal.style.display = 'block';
@@ -218,7 +217,7 @@ function closeRequestDishModal() {
   modal.style.display = 'none';
 }
 
-// Event Listeners
+
 cartBtn.addEventListener('click', () => {
   cartModal.style.display = 'block';
 });
@@ -236,7 +235,7 @@ window.addEventListener('click', (e) => {
 }
 });
 
-// Carousel Navigation
+
 const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
 
@@ -254,7 +253,7 @@ nextBtn.addEventListener('click', () => {
     });
 });
 
-// Form submissions
+
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -268,19 +267,36 @@ requestDishForm.addEventListener('submit', function(e) {
     const dishName = document.getElementById('dishName').value;
     const dishImage = document.getElementById('dishImage').files[0];
     
-    // Here you would typically send this data to a server
+    
     console.log('Dish requested:', { dishName, dishImage });
 
-    // Clear form and close modal
+    
     this.reset();
     closeRequestDishModal();
     alert('Thank you for your request! We will review it shortly.');
 });
 
-// Add click event listener to the "Request a Dish" button
+
 document.querySelector('.request-dish-btn').addEventListener('click', openRequestDishModal);
 
-// Initialize
+
 renderFoodItems();
 renderPopularItems();
 updateCart();
+
+const video = document.getElementById('promoVideo');
+const playBtn = document.getElementById('playPauseBtn');
+
+
+video.addEventListener('click', togglePlay);
+playBtn.addEventListener('click', togglePlay);
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+        playBtn.classList.add('hidden'); 
+    } else {
+        video.pause();
+        playBtn.classList.remove('hidden'); 
+    }
+}
